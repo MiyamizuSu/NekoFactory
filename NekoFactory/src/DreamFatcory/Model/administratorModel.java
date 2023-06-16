@@ -53,14 +53,29 @@ public  class administratorModel implements Model{
 			User h=iterator.next();
 			Iterator<User> iterator1=listData.iterator();
 			while(iterator1.hasNext()) {
-				User k=iterator1.next();
-				if(k.getName().equals(h.getName())) {
+				User k=iterator1.next();			
+					if(k.getName().equals(h.getName())) {
 					iterator1.remove();
 				}
 			}
 		}
 		return listData;
 	}
+	//设备一并删除
+	public ArrayList<Equipment> deleteEquipment(ArrayList<Equipment>listdata,ArrayList<User>list){
+		Iterator<User> iterator=list.iterator();
+		while(iterator.hasNext()) {
+			User h=iterator.next();
+			Iterator<Equipment> iterator1=listdata.iterator();
+			while(iterator1.hasNext()) {
+					Equipment j=iterator1.next();				
+					if(j.getBelong().equals(h.getFaname())) {
+						iterator1.remove();
+					}
+				}
+			}
+		return listdata;
+		}
 	//修改用户信息
 	public ArrayList<User> changeMessage(ArrayList<User>listData,ArrayList<User>list,String key,String name,String Tel,String faName,String des) {
 		Iterator<User> iterator1=listData.iterator();
@@ -363,4 +378,21 @@ public  class administratorModel implements Model{
 		}
 		return listdata;
 	}
+	//强制归还设备
+	public ArrayList<Equipment> returnEquipment(ArrayList<Equipment> listdata,ArrayList<Equipment>list) {
+			Iterator<Equipment> iterator=list.iterator();
+			while(iterator.hasNext()) {
+				Iterator<Equipment> iteratorData=listdata.iterator();
+				Equipment k=iterator.next();
+				while(iteratorData.hasNext()) {
+					Equipment h=iteratorData.next();
+					if(k.getCode().equals(h.getCode())) {
+						h.setBelong("无");
+						h.setNetural2("未被租用");
+						h.setNetural1("关机");
+					}
+				}
+			}
+			return listdata;
+		}
 }

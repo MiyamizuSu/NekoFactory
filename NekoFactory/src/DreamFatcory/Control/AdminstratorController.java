@@ -75,17 +75,38 @@ public class AdminstratorController implements Controller{
 		return null;
 	}
 	//删除所选择的用户
-	public void removeUser(String filename,ArrayList<User> list){
+	public void removeUser(String filename,ArrayList<User> list)throws NomalException{
 		try {
 			Database data=operations.ReadData(filename);
+			this.checkUser(list, data.getEquiments());
 			data.setUsers(model1.deleteUser(data.getUsers(),list));
+			data.setEquipments(model1.deleteEquipment(data.getEquiments(),list));
 			operations.updateData(filename, data);
+		}
+		catch(NomalException e) {
+			throw e;
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	//
+	//检查用户信息
+	public void checkUser(ArrayList<User>list,ArrayList<Equipment>listdata) throws NomalException{
+		Iterator<User> iterator=list.iterator();
+		while(iterator.hasNext()) {
+			User k=iterator.next();
+			Iterator<Equipment>iteratorData=listdata.iterator();
+			while(iteratorData.hasNext()){
+				Equipment h=iteratorData.next();
+				if(k.getFaname().equals(h.getBelong())) {
+					if(h.getNetural2().equals("已被租用")) {
+						throw new NomalException();
+					}
+				}
+			}
+		}
+	}
 	//检查选择为空问题
 	public void checkNullu(ArrayList<User> users) throws NothingContainException{
 		try {
@@ -622,6 +643,39 @@ public class AdminstratorController implements Controller{
 		listdata=model1.changeEquipment(listdata, code, name, Catagory, size, des, belong);
 		database.setEquipments(listdata);
 		operations.updateData(filename, database);
+		}
+		catch(SomethingNullException e) {
+			throw e;
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	//强制归还设备
+	public void returnEquipment(String filename,ArrayList<Equipment> list) throws NomalException,SomethingNullException{
+		try {
+			Iterator<Equipment>iterator=list.iterator();
+			ArrayList<Equipment>want=new ArrayList<Equipment>();
+		    while(iterator.hasNext()) {
+		    	Equipment k=iterator.next();
+		    	if(k.getNetural2().equals("已被租用")) {
+		    		want.add(k);
+		    	}
+		    	if(k.getNetural2().equals("工厂设备")) {
+		    		throw new NomalException();
+		    	}
+		    }
+	    if(want.size()==0) {
+	    	throw new SomethingNullException();
+	    }
+	    Database database=operations.ReadData(filename);
+	    ArrayList<Equipment> listdata=database.getEquiments();
+	    listdata=model1.returnEquipment(listdata, want);
+	    database.setEquipments(listdata);
+	    operations.updateData(filename, database);
+	    }
+		catch(NomalException e) {
+			throw e;
 		}
 		catch(SomethingNullException e) {
 			throw e;

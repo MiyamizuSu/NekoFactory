@@ -180,6 +180,21 @@ public class UserController implements Controller{
 			throw e;
 		}	
 	}
+	//检测是否为共有设备
+	public void checkPublicEquipment(ArrayList<Equipment>list) throws NomalException{
+		try {
+		Iterator<Equipment> iterator=list.iterator();
+		while(iterator.hasNext()) {
+			Equipment k=iterator.next();
+				if(k.getNetural2().equals("已被租用")) {
+					throw new NomalException();
+			}
+		}
+		}
+		catch(NomalException e) {
+			throw e;
+		}
+	}
 	//用户删除设备
 	public void removeEquipment(String filename,ArrayList<Equipment>list) throws NomalException{
 		try {
@@ -232,6 +247,36 @@ public class UserController implements Controller{
 			listData=model2.turnOn_Off(list, listData);
 			database.setEquipments(listData);
 			operation.updateData(filename, database);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	//用户归还设备
+	public void returnEquipment(String filename,ArrayList<Equipment>list) throws NomalException,NothingContainException {
+		try {
+			if(list.size()==0) {
+				throw new NothingContainException();
+			}
+			Iterator<Equipment> iterator=list.iterator();
+			while(iterator.hasNext()) {
+				Equipment k=iterator.next();
+				if(k.getNetural2().equals("工厂设备"))
+				{
+					throw new NomalException();
+				}
+			}
+			Database database=operation.ReadData(filename);
+			ArrayList<Equipment>listdata= database.getEquiments();
+			listdata=model2.returnEquipment(listdata, list);
+			database.setEquipments(listdata);
+			operation.updateData(filename, database);
+		}
+		catch(NothingContainException e) {
+			throw e;
+		}
+		catch(NomalException e) {
+			throw e;
 		}
 		catch(Exception e) {
 			e.printStackTrace();

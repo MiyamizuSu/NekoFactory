@@ -113,4 +113,21 @@ public class UserModel implements Model{
 		}
 		return listdata;
 	}
+	//用户归还设备
+	public ArrayList<Equipment> returnEquipment(ArrayList<Equipment>listdata,ArrayList<Equipment>list){
+		Iterator<Equipment> iterator=list.iterator();
+		while(iterator.hasNext()) {
+			Iterator<Equipment> iteratorData=listdata.iterator();
+			Equipment k=iterator.next();
+			while(iteratorData.hasNext()) {
+				Equipment h=iteratorData.next();
+				if(k.getCode().equals(h.getCode())) {
+					h.setBelong("无");
+					h.setNetural2("未被租用");
+					h.setNetural1("关机");
+				}
+			}
+		}
+		return listdata;
+	}
 }

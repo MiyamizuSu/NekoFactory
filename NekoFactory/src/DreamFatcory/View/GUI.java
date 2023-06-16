@@ -98,10 +98,18 @@ public class GUI {
 		Label label=new Label();
 		Button button1=new Button();
 		Button button2=new Button();
+		label.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
+		button1.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
 		TextField text1=new TextField();
 		TextField text2=new TextField();
-		Image background = new Image("file:images/头图.jpg");
-		BackgroundImage backIm=new BackgroundImage(background, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,new BackgroundSize(800, 600, false, false, true, true));
+//		Image background = new Image("file:images/头图.jpg");
+//		BackgroundImage backIm=new BackgroundImage(background, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,new BackgroundSize(800, 600, false, false, true, true));
+        Image backgroundImage = new Image("file:images/10.jpg");
+        ImageView backgroundImageView = new ImageView(backgroundImage);
+        backgroundImageView.setOpacity(0.7);
+        this.setWH(backgroundImageView, 1000,1000);
+        root.getChildren().add(backgroundImageView);
 		text1.setPromptText("账号:");
 		text2.setPromptText("密码:");
 		button1.setText("登录");
@@ -152,7 +160,7 @@ public class GUI {
 		this.setXYWH(button2,200, 700,100,50);
 		this.setXYWH(button1,600, 700,100,50);
 		label.setFont(Font.font("Arial", 70));
-		root.setBackground(new Background(backIm));
+//		root.setBackground(new Background(backIm));
 		root.getChildren().add(label);
 		root.getChildren().add(button1);
 		root.getChildren().add(button2);
@@ -168,6 +176,12 @@ public class GUI {
 		Label well=new Label();
 		well.setText(Text);
 		StackPane root=new StackPane();
+        Image backgroundImage = new Image("file:images/10.jpg");
+		well.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
+        ImageView backgroundImageView = new ImageView(backgroundImage);
+        backgroundImageView.setOpacity(0.7);
+        this.setWH(backgroundImageView, 200,200);
+        root.getChildren().add(backgroundImageView);
 		root.getChildren().add(well);
 		Scene gooodScene =new Scene(root,200,200);
 		happy.setScene(gooodScene);
@@ -185,6 +199,12 @@ public class GUI {
 		well.setText(Text);
 		StackPane root=new StackPane();
 		root.getChildren().add(well);
+        Image backgroundImage = new Image("file:images/10.jpg");
+		well.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
+        ImageView backgroundImageView = new ImageView(backgroundImage);
+        backgroundImageView.setOpacity(0.7);
+        this.setWH(backgroundImageView, 200,200);
+        root.getChildren().add(backgroundImageView);
 		Scene gooodScene =new Scene(root,200,200);
 		happy.setScene(gooodScene);
 		PauseTransition pause = new PauseTransition(Duration.seconds(1));
@@ -201,6 +221,12 @@ public class GUI {
 		well.setText(Text);
 		StackPane root=new StackPane();
 		root.getChildren().add(well);
+		well.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
+        Image backgroundImage = new Image("file:images/10.jpg");
+        ImageView backgroundImageView = new ImageView(backgroundImage);
+        backgroundImageView.setOpacity(0.7);
+        this.setWH(backgroundImageView, 200,200);
+        root.getChildren().add(backgroundImageView);
 		Scene gooodScene =new Scene(root,200,200);
 		happy.setScene(gooodScene);
 		PauseTransition pause = new PauseTransition(Duration.seconds(1));
@@ -216,6 +242,12 @@ public class GUI {
 		well.setText(Text);
 		StackPane root=new StackPane();
 		root.getChildren().add(well);
+		well.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
+        Image backgroundImage = new Image("file:images/10.jpg");
+        ImageView backgroundImageView = new ImageView(backgroundImage);
+        backgroundImageView.setOpacity(0.7);
+        this.setWH(backgroundImageView, 200,200);
+        root.getChildren().add(backgroundImageView);
 		Scene goodScene =new Scene(root,200,200);
 		happy.setScene(goodScene);
 		PauseTransition pause = new PauseTransition(Duration.seconds(1));
@@ -239,12 +271,24 @@ public class GUI {
         this.setWH(backgroundImageView, 500,700);
         root.getChildren().add(backgroundImageView);
 		Button button1=new Button("确定");Button button2=new Button("返回");
+		button1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
 		Label la1=new Label();Label la2=new Label();Label la3=new Label();
 		Label la4=new Label();Label la5=new Label();Label la6=new Label();Label la7=new Label();
+		la1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la3.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la4.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la5.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la6.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la7.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
 		TextField text1=new TextField();TextField text2=new TextField();TextField text3=new TextField();
 		TextField text4=new TextField();TextField text5=new TextField();TextField text6=new TextField();
 		ToggleGroup raButtons =new ToggleGroup();
 		RadioButton raButton1=new RadioButton("云工厂"); RadioButton raButton2=new RadioButton("经销商");
+		raButton1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		raButton2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+
 //		 String backgroundImageUrl ="file:///C://Users//80510//Desktop//顶级//106871956_p0.jpg";
 //		 String css ="-fx-background-image: url('" + backgroundImageUrl + "');"+"-fx-background-size: cover;";
 //	 	    root.setStyle(css);
@@ -318,12 +362,15 @@ public class GUI {
 		thirdStage.setTitle("管理员界面");
 	    VBox root=new VBox();
 //	    Image image=new Image("C:\\Users\\80510\\Desktop\\顶级\\106871956_p0.jpg");
-	    String backgroundImageUrl ="file:images/44.jpg";
+	    String backgroundImageUrl ="file:images/10.jpg";
 	    String css = "-fx-background-color: rgba(255, 255, 255, 0.2); "+"-fx-background-image: url('" + backgroundImageUrl + "');"+"-fx-background-size: cover;";
 //	    BackgroundImage backImage=new BackgroundImage(image,BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,new BackgroundSize(500,500, false,false,true,false));
 	    Button button1=new Button("用户管理");Button button2=new Button("云工厂管理");Button button3=new Button("产品类别管理");
 	    Button button4=new Button("产品信息管理");Button button5=new Button("设备类型管理"); Button button6=new Button("设备管理");
-//	    button1.setOpacity(0.9);button2.setOpacity(0.9);button3.setOpacity(0.9);
+		button1.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");button2.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");		
+		button5.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");button3.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button6.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");button4.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+//	    button1.setOpacity(0.9);button2.setOpacity(0.9);button3.setOpacity(0.9);s
 //	    button4.setOpacity(0.9);button5.setOpacity(0.9);button6.setOpacity(0.9);
 		root.setSpacing(80);
 	    button1.setPrefWidth(n);button2.setPrefWidth(n);button3.setPrefWidth(n);
@@ -395,6 +442,14 @@ public class GUI {
 		forthStage.setTitle("用户管理");
 		Button button1=new Button("查找");Button button2=new Button("重置"); Button button3=new Button("新建");
 		Button button4=new Button("删除");Button button5=new Button("修改"); Button button6=new Button("返回");
+		IDColumn.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		codeColumn.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		nameColumn.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		telColumn.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		zColumn.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button6.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");button3.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button5.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");button4.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		this.setXYWH(button1, 180,25 , n, k);this.setXYWH(button2, 300, 25, n, k);this.setXYWH(button6,700, 465, n, k);
 		this.setXYWH(button3, 10, 125, n, k);this.setXYWH(button4, 130, 125, n, k);this.setXYWH(button5, 300, 125, n, k);
 		this.setXY(textField, 10,25);
@@ -478,17 +533,27 @@ public class GUI {
 		Pane root=new Pane();	
 		Button button1=new Button("确认");
 		Button button2=new Button("再想想");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		Label label=new Label();
 		label.setText("请再次确认是否要删除哦>.<");
+		label.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
 		label.setFont(new Font(14));
 		this.setXY(label, 10, 25);
 		this.setXYWH(button2, 20, 55, 65, 25);
 		this.setXYWH(button1, 105, 55, 65,25);
 
 		button1.setOnAction(remove->{
+			try {
 			adController.removeUser(filename,removions);
-			stage.close();
 			this.HappyEnd3("删除");
+			}
+			catch(NomalException e) {
+				this.ExceptionEnd("这位用户还有未归还的设备喵~");
+			}
+			finally {
+				stage.close();
+			}
 		});
 		button2.setOnAction(back->{
 			stage.close();
@@ -507,7 +572,13 @@ public class GUI {
 		Label label=new Label();
 		PauseTransition pause = new PauseTransition(Duration.seconds(1.5));
 		label.setFont(new Font(16));
+        Image backgroundImage = new Image("file:images/10.jpg");
+        ImageView backgroundImageView = new ImageView(backgroundImage);
+        backgroundImageView.setOpacity(0.6);
+        this.setWH(backgroundImageView, 200,100);
+        root.getChildren().add(backgroundImageView);
 		label.setText(contain+"成功啦,喵!");
+		label.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
 		root.getChildren().add(label);
 		Scene scene=new Scene(root,200,100);
 		stage.setScene(scene);
@@ -526,12 +597,23 @@ public class GUI {
 		Stage sceondStage =new Stage();
 		Pane root=new Pane();
 		Button button1=new Button("确定");Button button2=new Button("返回");
+		button1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
 		Label la1=new Label();Label la2=new Label();Label la3=new Label();
 		Label la4=new Label();Label la5=new Label();Label la6=new Label();Label la7=new Label();
 		TextField text1=new TextField();TextField text2=new TextField();TextField text3=new TextField();
 		TextField text4=new TextField();TextField text5=new TextField();TextField text6=new TextField();
+		la1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la3.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la4.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la5.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la6.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la7.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
 		ToggleGroup raButtons =new ToggleGroup();
 		RadioButton raButton1=new RadioButton("云工厂"); RadioButton raButton2=new RadioButton("经销商");
+		raButton1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		raButton2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
         Image backgroundImage = new Image("file:images/44.jpg");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         backgroundImageView.setOpacity(0.35);
@@ -573,7 +655,6 @@ public class GUI {
 			});
 		button2.setOnAction(event1 ->{
 			sceondStage.close();
-			this.StartView();
 		});
 		this.setXY(la1,20,mid);this.setXY(la2,20,mid+n);this.setXY(la3, 20, mid+n*2);this.setXY(la4, 20, mid+n*3);
 		this.setXY(la5, 20, mid+n*4);this.setXY(la6, 20, mid+n*5);this.setXY(la7, 20, mid+n*6);
@@ -609,11 +690,22 @@ public class GUI {
 		Pane root=new Pane();
 		User ans=select.get(0);
 		Button button1=new Button("确定");Button button2=new Button("返回");
+		button1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
 		Label la1=new Label();Label la2=new Label();Label la3=new Label();
 		Label la4=new Label();Label la5=new Label();Label la6=new Label();Label la7=new Label();
+		la1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la3.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la4.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la5.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la6.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		la7.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
 		TextField text1=new TextField(ans.getCode());TextField text2=new TextField(ans.getKey());TextField text3=new TextField(ans.getName());
 		TextField text4=new TextField(ans.getTel());TextField text5=new TextField(ans.getFaname());TextField text6=new TextField(ans.getFaDes());
 		RadioButton raButton1=new RadioButton("云工厂"); RadioButton raButton2=new RadioButton("经销商");
+		raButton1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		raButton2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
         Image backgroundImage = new Image("file:images/44.jpg");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         backgroundImageView.setOpacity(0.35);
@@ -686,6 +778,9 @@ public class GUI {
 		Button button1=new Button("按工厂名称查找");
 		Button button2=new Button("切换");
 		Button button3=new Button("返回");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button3.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		TableView<Factory> tableView= new TableView<Factory>();
 		ObservableList<Factory> data= FXCollections.observableArrayList(adController.showAllFactory(filename));
 		TableColumn<Factory, Integer> IDColumn=new TableColumn<>("ID");
@@ -694,6 +789,12 @@ public class GUI {
 		TableColumn<Factory, String> telColumn=new TableColumn<>("联系方式");
 		TableColumn<Factory, String> codeColumn=new TableColumn<>("登陆账号");
 		TableColumn<Factory, String> netrualColunmn=new TableColumn<>("工厂状态");
+		IDColumn.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		codeColumn.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		nameColumn.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		telColumn.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		ownerColumn.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		netrualColunmn.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
 		Image image=new Image("file:images/11.png");
 		ImageView imView=new ImageView(image);
 		Image image1=new Image("file:images/22.png");
@@ -770,6 +871,8 @@ public class GUI {
 		Pane root =new Pane();
 		TableColumn<Catagory, Integer> IDColumn=new TableColumn<>("ID");
 		TableColumn<Catagory, String> catagoryColumn=new TableColumn<>("类别名称");
+		IDColumn.setStyle("-fx-text-fill: RGB(0,200,127);"+"-fx-font-weight: bold;");
+		catagoryColumn.setStyle("-fx-text-fill: RGB(0,200,127);"+"-fx-font-weight: bold;");
 		TableView<Catagory> tableView=new TableView<Catagory>();
 		ObservableList<Catagory> data= FXCollections.observableArrayList(adController.showAllProductCatagory(filename));
 		Button button1=new Button("按类别名称查询");
@@ -777,6 +880,11 @@ public class GUI {
 		Button button3=new Button("新建");
 		Button button4=new Button("删除");
 		Button button5=new Button("返回");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button3.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button4.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button5.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		TextField textField=new TextField();
 		Image image=new Image("file:images/11.png");
 		ImageView imView=new ImageView(image);
@@ -864,7 +972,10 @@ public class GUI {
 		textField.setPromptText("在此输入名称:");
 		textField.setPrefSize(200, 40);
 		textField.setStyle("-fx-font-size: 16px;");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		label.setText("请在下方输入新产品类的名称");
+		label.setStyle("-fx-text-fill: RGB(255,160,0);"+"-fx-font-weight: bold;");
 		label.setFont(new Font(20));
 		this.setXY(label, 20, 20);
 		this.setXY(textField, 50,65 );
@@ -900,8 +1011,11 @@ public class GUI {
 		Pane root=new Pane();
 		Button button1=new Button("确认");
 		Button button2=new Button("再想想");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		Label label=new Label();
 		label.setText("请再次确认是否要删除哦>.<");
+		label.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		label.setFont(new Font(14));
 		this.setXY(label, 10, 25);
 		this.setXYWH(button2, 20, 55, 65, 25);
@@ -940,6 +1054,12 @@ public class GUI {
 		Button button4=new Button("删除");
 		Button button5=new Button("修改");
 		Button button6=new Button("返回");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button3.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button4.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button5.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button6.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		Image image=new Image("file:images/11.png");
 		ImageView imView=new ImageView(image);
 		Image image1=new Image("file:images/22.png");
@@ -956,6 +1076,12 @@ public class GUI {
 		TableColumn<Product, String> catagoryColumn=new TableColumn<>("产品类别");
 		TableColumn<Product, String> sizeColumn=new TableColumn<>("产品规格");
  		TableColumn<Product, String> desColumn=new TableColumn<>("产品描述");
+		IdColumn.setStyle("-fx-text-fill: RGB(3,168,158);"+"-fx-font-weight: bold;");
+		codeColumn.setStyle("-fx-text-fill: RGB(3,168,158);"+"-fx-font-weight: bold;");
+		nameColumn.setStyle("-fx-text-fill: RGB(3,168,158);"+"-fx-font-weight: bold;");
+		catagoryColumn.setStyle("-fx-text-fill: RGB(3,168,158);"+"-fx-font-weight: bold;");
+		sizeColumn.setStyle("-fx-text-fill: RGB(3,168,158);"+"-fx-font-weight: bold;");
+		desColumn.setStyle("-fx-text-fill: RGB(3,168,158);"+"-fx-font-weight: bold;");
 		IdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
 		codeColumn.setCellValueFactory(new PropertyValueFactory<>("code"));
 		nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -1063,6 +1189,8 @@ public class GUI {
     	label.setText("产品注册");
     	Button button1=new Button("确定");  
     	Button button2=new Button("返回");
+    	button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+    	button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
     	root.requestFocus();
     	TextField text1=new TextField();    	
     	text1.setFocusTraversable(false);
@@ -1136,8 +1264,11 @@ public class GUI {
 		Pane root=new Pane();
 		Button button1=new Button("确认");
 		Button button2=new Button("再想想");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		Label label=new Label();
 		label.setText("请再次确认是否要删除哦>.<");
+		label.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		label.setFont(new Font(14));
 		this.setXY(label, 10, 25);
 		this.setXYWH(button2, 20, 55, 65, 25);
@@ -1177,10 +1308,18 @@ public class GUI {
     	label4.setText("产品描述");
     	Label label5=new Label();
     	label5.setText("产品类别");
+		label1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label3.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label4.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label5.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
     	ArrayList<Catagory> catagorys=adController.showAllProductCatagory(filename);
     	Iterator<Catagory> iterator=catagorys.iterator();
-    	Button button1=new Button("确定");  
+    	Button button1=new Button("确定"); 
+    	button1.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
     	Button button2=new Button("返回");
+    	button2.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+
         Image backgroundImage = new Image("file:images/77.jpg");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         backgroundImageView.setOpacity(0.6);
@@ -1257,10 +1396,12 @@ public class GUI {
 		int n=100;//button的长度
 		int i=25;//button的宽度
 		Stage sixthStage=new Stage();
-		sixthStage.setTitle("产品类别管理");
+		sixthStage.setTitle("设备类别管理");
 		Pane root =new Pane();
 		TableColumn<Catagory, Integer> IDColumn=new TableColumn<>("ID");
 		TableColumn<Catagory, String> catagoryColumn=new TableColumn<>("类别名称");
+		IDColumn.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		catagoryColumn.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
 		TableView<Catagory> tableView=new TableView<Catagory>();
 		ObservableList<Catagory> data= FXCollections.observableArrayList(adController.ShowAllEquipmentCatagory(filename));
 		Button button1=new Button("按类别名称查询");
@@ -1268,6 +1409,12 @@ public class GUI {
 		Button button3=new Button("新建");
 		Button button4=new Button("删除");
 		Button button5=new Button("返回");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button3.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button4.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button5.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+
 		TextField textField=new TextField();
 		Image image=new Image("file:images/11.png");
 		ImageView imView=new ImageView(image);
@@ -1348,15 +1495,18 @@ public class GUI {
 		int k=25;//button宽度
 		Stage  stage=new Stage();
 		Pane root=new Pane();
-		stage.setTitle("新建产品类");
+		stage.setTitle("新建设备类");
 		Label label=new Label();
 		TextField textField=new TextField();
 		Button button1=new Button("返回");
 		Button button2=new Button("确定");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		label.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
 		textField.setPromptText("在此输入名称:");
 		textField.setPrefSize(200, 40);
 		textField.setStyle("-fx-font-size: 16px;");
-		label.setText("请在下方输入新产品类的名称");
+		label.setText("请在下方输入新设备类的名称");
 		label.setFont(new Font(20));
 		this.setXY(label, 20, 20);
 		this.setXY(textField, 50,65 );
@@ -1392,8 +1542,11 @@ public class GUI {
 		Pane root=new Pane();
 		Button button1=new Button("确认");
 		Button button2=new Button("再想想");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		Label label=new Label();
 		label.setText("请再次确认是否要删除哦>.<");
+		label.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		label.setFont(new Font(14));
 		this.setXY(label, 10, 25);
 		this.setXYWH(button2, 20, 55, 65, 25);
@@ -1401,12 +1554,13 @@ public class GUI {
 		button1.setOnAction(remove->{
 			try {
 			adController.removeEquipmentCatagory(removions,filename);
-			stage.close();
 			this.HappyEnd3("删除");
 			}
 			catch(WasQuotedException e) {
-				stage.close();
 				this.ExceptionEnd(e);
+			}
+			finally {
+				stage.close();
 			}
 		});
 		button2.setOnAction(back->{
@@ -1437,6 +1591,15 @@ public class GUI {
 		Button button5=new Button("返回");
 		Button button6=new Button("修改");
 		Button button7=new Button("设备状态");
+		Button button8=new Button("强制归还");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button3.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button4.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button5.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button6.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button7.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button8.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		ObservableList<Equipment> data=FXCollections.observableArrayList(adController.showAllEquipments(filename));
 		TableView<Equipment> tableView=new TableView<Equipment>(); 
 		textField.setFocusTraversable(false);
@@ -1450,6 +1613,15 @@ public class GUI {
 		TableColumn<Equipment, String> desColumn= new TableColumn<>("设备描述");
 		TableColumn<Equipment,String> netural2Column=new TableColumn<>("租用状态");
 		TableColumn<Equipment,String> belongColumn=new TableColumn<>("所属工厂");
+		IdColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		codeColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		nameColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		catagoryColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		sizeColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		desColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		netural1Column.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		netural2Column.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		belongColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
 		Image image=new Image("file:images/00.jpg");
 		ImageView imView=new ImageView(image);
 		Image image1=new Image("file:images/22.png");
@@ -1531,6 +1703,24 @@ public class GUI {
 				this.ExceptionEnd(e);
 			}
 		});
+		button8.setOnAction(returnForced->{
+			try {
+			ObservableList<Equipment>select=tableView.getSelectionModel().getSelectedItems();
+			ArrayList<Equipment> returnions=new ArrayList<Equipment>(select);
+			adController.checkNull(returnions);
+			adController.returnEquipment(filename, returnions);
+			this.HappyEnd3("强制归还");
+			}
+			catch(SomethingNullException e) {
+				this.ExceptionEnd("里面没有已租借的设备喵~");
+			}
+			catch(NomalException e) {
+				this.ExceptionEnd("别人自己的设备不能强制归还喵~");
+			}
+			catch(NothingContainException e) {
+				this.ExceptionEnd(e);
+			}
+		});
 		this.setXY(textField, 10, 25);
 		this.setXYWH(button3, 10, 150, n, i);
 		this.setXYWH(button4, 130, 150, n, i);
@@ -1539,6 +1729,7 @@ public class GUI {
 		this.setXYWH(button5, 810, 570, n, i);
 		this.setXYWH(button6, 810, 150, n, i);
 		this.setXYWH(button7, 700, 150, n, i);
+		this.setXYWH(button8, 250, 150, n, i);
 		this.setXY(tableView, 10, 180);
 		this.setXY(imView1, 450, 0);
 		this.setWH(imView1, 200, 180);
@@ -1558,6 +1749,7 @@ public class GUI {
 		root.getChildren().add(tableView);
 		root.getChildren().add(imView1);
 		root.getChildren().add(imView);
+		root.getChildren().add(button8);
 		Scene scene=new Scene(root,950,600);
 		eightthStage.setScene(scene);
 		eightthStage.show();
@@ -1577,6 +1769,8 @@ public class GUI {
     	label.setText("设备注册");
     	Button button1=new Button("确定");  
     	Button button2=new Button("返回");
+    	button1.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+    	button2.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
     	root.requestFocus();
     	TextField text1=new TextField();    	
     	text1.setFocusTraversable(false);
@@ -1651,9 +1845,12 @@ public class GUI {
 		Pane root=new Pane();
 		Button button1=new Button("确认");
 		Button button2=new Button("再想想");
+		button1.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		Label label=new Label();
 		label.setText("请再次确认是否要删除哦>.<");
 		label.setFont(new Font(14));
+		label.setStyle("-fx-text-fill: RGB(51,161,201);"+"-fx-font-weight: bold;");
 		this.setXY(label, 10, 25);
 		this.setXYWH(button2, 20, 55, 65, 25);
 		this.setXYWH(button1, 105, 55, 65,25);
@@ -1690,11 +1887,20 @@ public class GUI {
     	Label label3=new Label("规格");
     	Label label4=new Label("描述");
     	Label label5=new Label("所属工厂");
+    	Label label6=new Label("设备类别");
+		label1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label3.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label4.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label5.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label6.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
     	Equipment equipment=select.get(0);
     	ArrayList<Catagory> catagorys=adController.ShowAllEquipmentCatagory(filename);
     	Iterator<Catagory> iterator=catagorys.iterator();
     	Button button1=new Button("确定");  
     	Button button2=new Button("返回");
+    	button1.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+    	button2.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
         Image backgroundImage = new Image("file:images/77.jpg");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         backgroundImageView.setOpacity(0.6);
@@ -1755,6 +1961,7 @@ public class GUI {
     	text4.setPrefSize(w, g);
     	text5.setPrefSize(w, g);
     	this.setXY(combox, 370, 20);
+    	this.setXY(label6, 370, 5);
     	this.setXY(label1, 20, 10);
     	this.setXY(text1,20, 20);
     	this.setXY(label2, 20, 80);
@@ -1767,7 +1974,7 @@ public class GUI {
     	this.setXY(text5, 20, 300);
     	this.setXYWH(button2, 175,350, n, k);
     	this.setXYWH(button1, 285, 350, n, k);
-    	root.getChildren().addAll(text1,text2,text3,text4,button1,button2,text5);
+    	root.getChildren().addAll(text1,text2,text3,text4,button1,button2,text5,label6);
     	root.getChildren().add(combox);
     	root.getChildren().addAll(label1,label2,label3,label4,label5);
     	Scene scene=new Scene(root,500,400);
@@ -1790,6 +1997,15 @@ public class GUI {
 		Button button5=new Button("重置");
 		Button button6=new Button("修改");
 		Button button7=new Button("退出账号");
+		Button button8=new Button("归还设备");
+		button1.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button3.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button4.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button5.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button6.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button7.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button8.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
 		ObservableList<Equipment> data=FXCollections.observableArrayList(uController.ShowAllUserEquipment(filename, code));
 		TableView<Equipment> tableView=new TableView<Equipment>(); 
 		TableColumn<Equipment, Integer> IdColumn=new TableColumn<>("ID");
@@ -1810,6 +2026,7 @@ public class GUI {
 		this.setXYWH(button2, 825, 65, n, i);
 		this.setXYWH(button6, 370, 65, n, i);
 		this.setXYWH(button7, 825, 560, n, i);
+		this.setXYWH(button8, 610, 65, n, i);
 		IdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
 		nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
 		codeColumn.setCellValueFactory(new PropertyValueFactory<>("code"));
@@ -1819,7 +2036,16 @@ public class GUI {
 		desColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
 		netural2Column.setCellValueFactory(new PropertyValueFactory<>("netural2"));
 		belongColumn.setCellValueFactory(new PropertyValueFactory<>("belong"));
-        Image backgroundImage = new Image("file:images/99.jpg");
+		IdColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		codeColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		nameColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		catagoryColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		sizeColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		desColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		netural1Column.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		netural2Column.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		belongColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+        Image backgroundImage = new Image("file:images/10.jpg");
         ImageView backgroundImageView = new ImageView(backgroundImage);
 //        backgroundImageView.setOpacity(0.6);
         this.setWH(backgroundImageView, 950,600);
@@ -1833,6 +2059,7 @@ public class GUI {
 		tableView.getColumns().addAll(IdColumn,nameColumn,codeColumn,catagoryColumn,sizeColumn,netural1Column);
 		tableView.getColumns().addAll(desColumn,netural2Column,belongColumn);
 		button1.setOnAction(watch->{
+			ninthStage.close();
 			this.lendEquipmentView(code);
 		});
 		button2.setOnAction(turn->{
@@ -1856,7 +2083,11 @@ public class GUI {
 			ArrayList<Equipment> removions=new ArrayList<Equipment>(select);
 			try {
 				uController.checkNull(removions);
+				uController.checkPublicEquipment(removions);
 				this.checkView9(removions);
+			}
+			catch(NomalException e) {
+				this.ExceptionEnd("不能删除公有的设备喵~");
 			}
 			catch(NothingContainException e) {
 				this.ExceptionEnd(e);
@@ -1871,12 +2102,12 @@ public class GUI {
 			ArrayList<Equipment> removtions=new ArrayList<Equipment>(select);
 			try {
 				adController.checkNull(removtions);
-				uController.checkMultiple(removtions);
+				uController.checkPublicEquipment(removtions);
 				this.changeView9(removtions);
 			}
-			catch(MultipleSelectException e) {
-				this.ExceptionEnd(e);
-			}
+        	catch(NomalException e) {
+        		this.ExceptionEnd("共有设备不能修改信息喵~");
+        	}
 			catch(NothingContainException e) {
 				this.ExceptionEnd(e);
 			}
@@ -1886,6 +2117,21 @@ public class GUI {
 		ninthStage.close();
 		this.StartView();
 		});
+		button8.setOnAction(returning->{
+			ObservableList<Equipment>select=tableView.getSelectionModel().getSelectedItems();
+			ArrayList<Equipment> list=new ArrayList<Equipment>(select);
+			try {
+				uController.returnEquipment(filename, list);
+				this.HappyEnd3("归还");
+			}	
+			catch(NothingContainException e) {
+				this.ExceptionEnd(e);
+			}
+			catch(NomalException e) {
+				this.ExceptionEnd("自己的设备不用归还哒喵~");
+			}
+
+		});
 		root.getChildren().add(button3);
 		root.getChildren().add(button1);
 		root.getChildren().add(button2);
@@ -1894,6 +2140,7 @@ public class GUI {
 		root.getChildren().add(button6);
 		root.getChildren().add(button7);
 		root.getChildren().add(tableView);
+		root.getChildren().add(button8);
 		Scene scene=new Scene(root,950,600);
 		ninthStage.setScene(scene);
 		ninthStage.show();
@@ -1913,6 +2160,9 @@ public class GUI {
     	label.setText("设备注册");
     	Button button1=new Button("确定");  
     	Button button2=new Button("返回");
+    	button1.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+    	button2.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+
     	root.requestFocus();
     	TextField text1=new TextField();    	
     	text1.setFocusTraversable(false);
@@ -1990,9 +2240,12 @@ public class GUI {
 		Pane root=new Pane();
 		Button button1=new Button("确认");
 		Button button2=new Button("再想想");
+		button1.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
 		Label label=new Label();
 		label.setText("请再次确认是否要删除哦>.<");
 		label.setFont(new Font(14));
+		label.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
 		this.setXY(label, 10, 25);
 		this.setXYWH(button2, 20, 55, 65, 25);
 		this.setXYWH(button1, 105, 55, 65,25);
@@ -2028,10 +2281,13 @@ public class GUI {
 		stage.setTitle("个人云工厂管理");
 		Pane root=new Pane();
 		Label label=new Label("设备租用中心");
+		label.setStyle("-fx-text-fill: RGB(218,112,214);");
 		Button button1=new Button("返回");
 		Button button2=new Button("租用");
 		Button button3=new Button("刷新设备状态");
-		Button button4=new Button("修改");
+		button1.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button2.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+		button3.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
 		ObservableList<Equipment>data=FXCollections.observableArrayList(adController.showAllFreeEquipment(filename));
 		TableView<Equipment> tableView=new TableView<Equipment>(); 
 		TableColumn<Equipment, Integer> IdColumn=new TableColumn<>("ID");
@@ -2043,6 +2299,15 @@ public class GUI {
 		TableColumn<Equipment, String> desColumn= new TableColumn<>("设备描述");
 		TableColumn<Equipment,String> netural2Column=new TableColumn<>("租用状态");
 		TableColumn<Equipment,String> belongColumn=new TableColumn<>("所属工厂");
+		IdColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		codeColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		nameColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		catagoryColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		sizeColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		desColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		netural1Column.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		netural2Column.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
+		belongColumn.setStyle("-fx-text-fill: RGB(65,105,225);"+"-fx-font-weight: bold;");
 		IdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
 		nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
 		codeColumn.setCellValueFactory(new PropertyValueFactory<>("code"));
@@ -2052,7 +2317,7 @@ public class GUI {
 		desColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
 		netural2Column.setCellValueFactory(new PropertyValueFactory<>("netural2"));
 		belongColumn.setCellValueFactory(new PropertyValueFactory<>("belong"));
-        Image backgroundImage = new Image("file:images/99.jpg");
+        Image backgroundImage = new Image("file:images/10.jpg");
         ImageView backgroundImageView = new ImageView(backgroundImage);
 //        backgroundImageView.setOpacity(0.6);
         this.setWH(backgroundImageView, 950,600);
@@ -2113,11 +2378,20 @@ public class GUI {
     	Label label3=new Label("规格");
     	Label label4=new Label("描述");
     	Label label5=new Label("所属工厂");
+    	Label label6=new Label("设备类别");
+		label1.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label2.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label3.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label4.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label5.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
+		label6.setStyle("-fx-text-fill: RGB(255,128,0);"+"-fx-font-weight: bold;");
     	Equipment equipment=select.get(0);
     	ArrayList<Catagory> catagorys=adController.ShowAllEquipmentCatagory(filename);
     	Iterator<Catagory> iterator=catagorys.iterator();
     	Button button1=new Button("确定");  
     	Button button2=new Button("返回");
+    	button2.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
+    	button1.setStyle("-fx-text-fill: RGB(218,112,214);"+"-fx-font-weight: bold;");
     	root.requestFocus();
     	TextField text1=new TextField(equipment.getCode());    	
     	text1.setFocusTraversable(false);
@@ -2177,6 +2451,7 @@ public class GUI {
     	text3.setPrefSize(w, g);
     	text4.setPrefSize(w, g);
     	text5.setPrefSize(w, g);
+    	this.setXY(label6, 370, 5);
     	this.setXY(combox, 370, 20);
     	this.setXY(label1, 20, 10);
     	this.setXY(text1,20, 20);
@@ -2190,7 +2465,7 @@ public class GUI {
     	this.setXY(text5, 20, 300);
     	this.setXYWH(button2, 175,350, n, k);
     	this.setXYWH(button1, 285, 350, n, k);
-    	root.getChildren().addAll(text1,text2,text3,text4,button1,button2,text5);
+    	root.getChildren().addAll(text1,text2,text3,text4,button1,button2,text5,label6);
     	root.getChildren().add(combox);
     	root.getChildren().addAll(label1,label2,label3,label4,label5);
     	Scene scene=new Scene(root,500,400);
@@ -2207,10 +2482,11 @@ public class GUI {
 		root.setStyle("-fx-background-color: white;");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         this.setWH1(backgroundImageView, 110, 40,50, 50);
-        this.setXY(label, 50, 20);
+        this.setXY(label, 30, 20);
         root.getChildren().add(backgroundImageView);
 		label.setFont(new Font(16));
 		label.setText(contain);
+		label.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
 		root.getChildren().add(label);
 		Scene scene=new Scene(root,280,100);
 		stage.setScene(scene);
@@ -2227,6 +2503,7 @@ public class GUI {
 		PauseTransition pause = new PauseTransition(Duration.seconds(2));
         Image backgroundImage = new Image("file:images/55.png");
 		root.setStyle("-fx-background-color: white;");
+		label.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         this.setWH1(backgroundImageView, 110, 40,50, 50);
         this.setXY(label, 90, 20);
@@ -2247,11 +2524,12 @@ public class GUI {
 		Pane root=new Pane();
 		Label label=new Label();
 		PauseTransition pause = new PauseTransition(Duration.seconds(2));
+		label.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
         Image backgroundImage = new Image("file:images/55.png");
 		root.setStyle("-fx-background-color: white;");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         this.setWH1(backgroundImageView, 110, 40,50, 50);
-        this.setXY(label, 50, 20);
+        this.setXY(label, 20, 20);
         root.getChildren().add(backgroundImageView);
 		label.setFont(new Font(16));
 		label.setText("这个类别正在被引用，不能删除喵~");
@@ -2270,6 +2548,7 @@ public class GUI {
 		Label label=new Label();
 		PauseTransition pause = new PauseTransition(Duration.seconds(2));
         Image backgroundImage = new Image("file:images/55.png");
+		label.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
 		root.setStyle("-fx-background-color: white;");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         this.setWH1(backgroundImageView, 110, 40,50, 50);
@@ -2292,6 +2571,7 @@ public class GUI {
 		Label label=new Label();
 		PauseTransition pause = new PauseTransition(Duration.seconds(2));
         Image backgroundImage = new Image("file:images/55.png");
+		label.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
 		root.setStyle("-fx-background-color: white;");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         this.setWH1(backgroundImageView, 110, 40,50, 50);
@@ -2314,6 +2594,7 @@ public class GUI {
 		Label label=new Label();
 		PauseTransition pause = new PauseTransition(Duration.seconds(2));
         Image backgroundImage = new Image("file:images/55.png");
+		label.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
 		root.setStyle("-fx-background-color: white;");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         this.setWH1(backgroundImageView, 110, 40,50, 50);
@@ -2336,6 +2617,7 @@ public class GUI {
 		Label label=new Label();
 		PauseTransition pause = new PauseTransition(Duration.seconds(2));
         Image backgroundImage = new Image("file:images/55.png");
+		label.setStyle("-fx-text-fill: RGB(218,120,214);"+"-fx-font-weight: bold;");
 		root.setStyle("-fx-background-color: white;");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         this.setWH1(backgroundImageView, 110, 40,50, 50);
